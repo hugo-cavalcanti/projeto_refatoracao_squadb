@@ -57,6 +57,31 @@ header .menu a {
   display: inline-block;
   padding: 0.65rem 0.8rem;
   text-align: center;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--site-ink, #0a0614);
+  font-weight: 400;
+  text-decoration: none;
+  transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+header nav a:hover,
+header nav a:focus-visible,
+header .menu a:hover,
+header .menu a:focus-visible,
+header nav a[aria-current="page"],
+header .menu a[aria-current="page"],
+header nav .pag-ativa,
+header .menu .pag-ativa {
+  background: var(--site-accent, #2349ff);
+  color: white;
+  transform: translateY(-2px);
+}
+
+header nav a:focus-visible,
+header .menu a:focus-visible {
+  outline: 3px solid rgb(35 73 255 / 30%);
+  outline-offset: 2px;
 }
 
 img,

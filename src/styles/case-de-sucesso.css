@@ -31,19 +31,19 @@ body {
   justify-content: space-evenly;
 }
 
-.desafio, .solucao, .resultados, .tecnologias {
+.desafio, .solucao, .resultados, .tecnologias, .depoimento {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.508);
   display: flex;
   padding: 20px 50px;
   gap: 20px;
   justify-content:baseline;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 24px;
 }
 
 .depoimento {
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.508);
   padding: 20px;
   color: black;
-  border-radius: 30px;
 }
 
 .menu {
@@ -93,4 +93,19 @@ a {
   color: #f3d3ab;
   padding: 20px;
   border-radius: 30px;
+}
+
+@media (max-width: 720px) {
+  .case-container,
+  .case-resultados {
+    padding: 0.75rem;
+  }
+
+  .desafio,
+  .solucao,
+  .resultados,
+  .tecnologias,
+  .depoimento {
+    padding: 1.25rem;
+  }
 }
