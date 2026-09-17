@@ -1,0 +1,156 @@
+/* Shared navigation and responsive safeguards for every page. */
+:root {
+  --site-content-width: 1180px;
+  --site-gap: clamp(1rem, 3vw, 3rem);
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: var(--site-content-width);
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+  overflow-x: hidden;
+}
+
+header,
+main,
+footer {
+  max-width: 100%;
+}
+
+header nav,
+header .menu {
+  width: 100%;
+}
+
+header nav ul,
+header .menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.35rem, 1.5vw, 1.25rem);
+  padding: 0;
+  margin: 0;
+}
+
+header nav li,
+header .menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav a,
+header .menu a {
+  display: inline-block;
+  padding: 0.65rem 0.8rem;
+  text-align: center;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+main {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 720px) {
+  body {
+    padding-inline: 1rem;
+  }
+
+  header nav ul,
+  header .menu ul {
+    gap: 0.25rem;
+  }
+
+  header nav a,
+  header .menu a {
+    padding: 0.55rem;
+    font-size: 0.9rem;
+  }
+
+  .header-bar h1,
+  .intro > h1,
+  .intro > h2,
+  .estrofe1 > h1,
+  header h1 {
+    font-size: clamp(2.2rem, 10vw, 4rem);
+    line-height: 1.1;
+  }
+
+  .apresentação,
+  .case-resultados,
+  .contact,
+  main,
+  .servicos-container {
+    flex-direction: column;
+  }
+
+  .apresentação > img,
+  .apresentação--intro,
+  form,
+  .project,
+  .profile,
+  .work-card {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .apresentação > img {
+    width: min(100%, 450px);
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .projects-container,
+  .depoimentos {
+    height: auto;
+    padding-inline: 0;
+  }
+
+  .project-card,
+  .work-card {
+    margin-block: 1rem;
+    padding: clamp(1rem, 4vw, 2rem);
+  }
+
+  .formulario input,
+  .formulario textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  header nav a,
+  header .menu a {
+    font-size: 0.8rem;
+  }
+
+  .chat-toggle {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .chat-panel {
+    right: 0.75rem;
+    bottom: 4.75rem;
+    width: calc(100vw - 1.5rem);
+  }
+}
