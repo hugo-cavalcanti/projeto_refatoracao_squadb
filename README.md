@@ -47,11 +47,11 @@ Tambem e possivel abrir `src/home.html` diretamente no navegador, mas o Live Ser
 2. Clique no botao `?` no canto inferior direito.
 3. Envie perguntas como `Quais servicos voces oferecem?`, `Quais projetos existem?` ou `Quais skills a squad possui?`.
 4. Sem configuracao adicional, o chat responde pelo mock local, limitado ao conteudo institucional.
-5. Para permitir perguntas abertas e respostas geradas por IA, configure uma chave Gemini apenas no navegador local.
+5. Para permitir perguntas abertas e respostas geradas por IA, abra o chat, clique em **Configurar IA**, cole uma chave Gemini e salve apenas no navegador local.
 
 ### Gemini para perguntas abertas
 
-Nao coloque uma chave em HTML, CSS, JavaScript versionado ou README. No console do navegador, configure temporariamente:
+Nao coloque uma chave em HTML, CSS, JavaScript versionado ou README. Pela interface do chat, clique em **Configurar IA**, informe a chave e clique em **Salvar chave**. O equivalente pelo console do navegador e:
 
 ```js
 localStorage.setItem('gemini_api_key', 'SUA_CHAVE_LOCAL')
