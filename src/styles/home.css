@@ -19,11 +19,22 @@ body {
 
 main {
   font-family: "Science Gothic", sans-serif;  
-  margin: 50px;
+  width: 100%;
+  max-width: 100%;
+  margin: clamp(1.5rem, 5vw, 3.5rem) auto;
   padding: 20px;
+  box-sizing: border-box;
   background-color: #ad66f5;
   box-shadow: #613f7ce5 10px 10px 20px;
   border-radius: 40px;
+}
+
+@media (max-width: 720px) {
+  main {
+    margin-block: 1.5rem;
+    padding: clamp(1rem, 5vw, 1.5rem);
+    border-radius: 1.5rem;
+  }
 }
 
 ul {

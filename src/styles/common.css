@@ -22,6 +22,11 @@ footer {
   max-width: 100%;
 }
 
+header {
+  display: block;
+  width: 100%;
+}
+
 header nav,
 header .menu {
   width: 100%;
@@ -29,13 +34,15 @@ header .menu {
 
 header nav ul,
 header .menu ul {
+  width: fit-content;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: clamp(0.35rem, 1.5vw, 1.25rem);
   padding: 0;
-  margin: 0;
+  margin-inline: auto;
 }
 
 header nav li,
